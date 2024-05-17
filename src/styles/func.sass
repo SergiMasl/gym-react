@@ -1,0 +1,12 @@
+@mixin container()
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    max-width: 100%
+
+@mixin wrapper($js,$ai, $width)
+    display: flex
+    justify-content: $js
+    align-items: $ai
+    width: $width

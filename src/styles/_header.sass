@@ -1,0 +1,46 @@
+@import "./var"
+@import "./func"
+.container
+    position: absolute
+    top: 0
+    left: 0
+    height: 60px
+    @include container()
+
+@media screen and (max-width: 900px)
+    .container
+        position: fixed
+        height: 60px
+        display: flex
+        justify-content: flex-end
+        width: 90%
+        .header
+            display: none
+@media screen and (min-width: 900px)
+    .header
+        @include wrapper(space-between,center, 900px)
+        height: 60px
+        .header-logo-wrap
+            .header-logo
+                @include container()
+                img
+                    width: $logo-text
+                    height: $logo-text
+                p
+                    color: $bright-white
+                    font-size: $logo-text
+                    margin-left: 10px
+        .nav-list
+            @include wrapper(space-between,center, 100%)
+            gap: 20px
+            .nav-list-item
+            .nav-item
+                font-size: $s1
+        .header-book-wrap
+            .header-book-btm
+                width: 70px
+                background-color: $orange-corp
+                padding: 10px 30px
+                font-size: 1em
+                color: $bright-white
+                border-radius: 5px

@@ -1,0 +1,7 @@
+[
+    { "id": "1", "title": "About", "route": "/gym-react/about" },
+    { "id": "2", "title": "Service", "route": "/gym-react/service" },
+    { "id": "3", "title": "Blog", "route": "/gym-reactblog" },
+    { "id": "5", "title": "Our classes", "route": "/gym-react/class" },
+    { "id": "4", "title": "Contact us", "route": "/gym-react/contact" }
+  ]

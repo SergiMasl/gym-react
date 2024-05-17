@@ -1,0 +1,118 @@
+@import "./func"
+@import "./var"
+
+.wrapper
+    @include wrapper(space-between,center, 900px)
+    height: calc(100vh)
+    padding-top: 60px
+    display: flex
+    .section
+        height: calc(100vh - 60px)
+        max-width: 100%
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .main-content
+            max-width: 60%
+            width: 60%
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: start
+            .mc-wrapper
+                margin-top: 50px
+                height: 300px
+            .main-content-title
+                color: $bright-white
+                margin-bottom: 10px
+                font-size: $s2-5
+            p
+                color: $links
+                word-spacing: 5px
+            .m-info-w
+                color: $bright-white
+                width: 100%
+                border: 1px solid $links
+                position: relative
+                display: flex
+                align-items: center
+                justify-content: flex-end
+
+                ul
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-end
+                    justify-content: center
+                    text-align: end
+                    width: 300px
+
+                li
+                    cursor: pointer
+                    padding: 20px 20px 20px 0px
+                    width: 100%
+                    border-bottom: 1px solid $orange-corp
+                    &:last-child
+                        border-bottom: none
+                    &:hover
+                        background-color: $orange-corp
+
+                .m-info-image
+                    width: 200px
+                    position: absolute
+                    left: -20px
+
+                    transform: translateX(-60px)
+                    transition: 0.5s
+                    transition-property: transform
+                    transition-timing-function: ease-in-out
+                    img
+                        max-width: 100%
+                        width: 100%
+                .movingMain-0
+                    transform: translateY(-60px)
+                .movingMain-1
+                    transform: translateY(0)
+                .movingMain-2
+                    transform: translateY(60px)
+
+            .m-info-w-starwrapper
+                position: absolute
+                top: -30px
+                right: -30px
+                background-color: $orange-corp
+                border-radius: 50px
+                width: 30px
+                height: 30px
+                padding: 10px
+                .star-svg
+                    max-width: 100%
+                    width: 100%
+        @keyframes slideIn
+            from
+                transform: translateX(100%)
+
+            to
+                transform: translateX(0)
+        .main-img-wrap
+            max-width: 35%
+            width: 35%
+
+            overflow: hidden
+            display: flex
+            justify-content: center
+            align-items: center
+            .main-img
+                max-width: 100%
+                width: 100%
+                animation: slideIn 1s ease-out forwards
+    .animate
+        transition: transform 0.5s ease
+        animation: moveUpDown 1s infinite alternate
+
+        @keyframes moveUpDown
+            0%
+                transform: translateY(0)
+
+            100%
+                transform: translateY(-20px)
