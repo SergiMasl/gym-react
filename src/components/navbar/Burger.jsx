@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./_burger.sass";
 
-function Burger({ setIsBurgerOn, isBurgerOn }) {
-  const [isOpen, setIsOpen] = useState(false);
-
+function Burger({ setIsBurgerOn, isBurgerOn, isOpen, setIsOpen }) {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     setIsBurgerOn(!isBurgerOn);

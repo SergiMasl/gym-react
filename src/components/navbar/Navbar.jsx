@@ -9,6 +9,7 @@ import navList from "../../asses/navList.json";
 export default function Navbar() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isBurgerOn, setIsBurgerOn] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,13 +28,22 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className={`container ${isSmallScreen ? "burger-active" : ""}`}>
+    <div className={`container ${isSmallScreen ? "burger-active " : ""}`}>
       {isSmallScreen ? (
         <Header Logo={Logo} navList={navList} />
       ) : (
         <>
-          <SmallNav isBurgerOn={isBurgerOn} />
-          <Burger setIsBurgerOn={setIsBurgerOn} isBurgerOn={isBurgerOn} />
+          <SmallNav
+            isBurgerOn={isBurgerOn}
+            setIsBurgerOn={setIsBurgerOn}
+            setIsOpen={setIsOpen}
+          />
+          <Burger
+            setIsBurgerOn={setIsBurgerOn}
+            isBurgerOn={isBurgerOn}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+          />
         </>
       )}
     </div>

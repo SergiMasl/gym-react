@@ -32,10 +32,6 @@ export default function Home() {
   const animationMain = (e) => {
     setContentUsage(e);
     setIsClicked(e);
-
-    // setTimeout(() => {
-    //   setIsClicked(false);
-    // }, 2000);
   };
 
   return (
@@ -62,7 +58,13 @@ export default function Home() {
             <div className="m-info-content">
               <ul>
                 {content.map((i) => (
-                  <li key={i.id} onClick={() => animationMain(i.id)}>
+                  <li
+                    key={i.id}
+                    onClick={() => animationMain(i.id)}
+                    className={`${contentUsage == i.id ? "activity" : ""} ${
+                      contentUsage == i.id ? "activity" : ""
+                    } ${contentUsage == i.id ? "activity" : ""}`}
+                  >
                     {i.title}
                   </li>
                 ))}
