@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/gym-react/static/css/main.68db890c.css",
-    "main.js": "/gym-react/static/js/main.125b2463.js",
+    "main.css": "/gym-react/static/css/main.a4445cf6.css",
+    "main.js": "/gym-react/static/js/main.e7494743.js",
     "static/media/main.png": "/gym-react/static/media/main.ce2e70fc7ba5868afc5d.png",
     "static/media/main-pic-content.png": "/gym-react/static/media/main-pic-content.987762ba1db1bdcb5718.png",
     "static/media/logo.svg": "/gym-react/static/media/logo.fb860d5ecedce8351b1dffec74829235.svg",
     "index.html": "/gym-react/index.html",
     "static/media/star.svg": "/gym-react/static/media/star.4624ab33f7f720ab24e27e89f31f0d2f.svg",
-    "main.68db890c.css.map": "/gym-react/static/css/main.68db890c.css.map",
-    "main.125b2463.js.map": "/gym-react/static/js/main.125b2463.js.map"
+    "main.a4445cf6.css.map": "/gym-react/static/css/main.a4445cf6.css.map",
+    "main.e7494743.js.map": "/gym-react/static/js/main.e7494743.js.map"
   },
   "entrypoints": [
-    "static/css/main.68db890c.css",
-    "static/js/main.125b2463.js"
+    "static/css/main.a4445cf6.css",
+    "static/js/main.e7494743.js"
   ]
 }
